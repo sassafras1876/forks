@@ -26,7 +26,7 @@ library.theme = {
     tilesize = 90,
     cursor = true,
     --cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
-    logoimg = "rbxassetid://7508039952",
+    logoimg = "rbxthumb://type=Asset&id=7615992569&w=420&h=420", -- ok for now, icon lowkey kinda trash
     backgroundcolor = Color3.fromRGB(20, 20, 20),
     tabstextcolor = Color3.fromRGB(240, 240, 240),
     bordercolor = Color3.fromRGB(60, 60, 60),
