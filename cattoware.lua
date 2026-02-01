@@ -5,7 +5,7 @@ local library = {
 }
 
 -- Services
-local players = game:GetService("Players") -- hi sivi
+local players = game:GetService("Players") 
 local uis = game:GetService("UserInputService")
 local runservice = game:GetService("RunService")
 local tweenservice = game:GetService("TweenService")
@@ -26,7 +26,7 @@ library.theme = {
     tilesize = 90,
     cursor = true,
     --cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
-    logoimg = "rbxassetid://12892641906", -- testing random logos
+    logoimg = "rbxassetid://12892641906",
     backgroundcolor = Color3.fromRGB(20, 20, 20),
     tabstextcolor = Color3.fromRGB(240, 240, 240),
     bordercolor = Color3.fromRGB(60, 60, 60),
