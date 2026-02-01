@@ -5,7 +5,7 @@ local library = {
 }
 
 -- Services
-local players = game:GetService("Players")
+local players = game:GetService("Players") -- hi sivi
 local uis = game:GetService("UserInputService")
 local runservice = game:GetService("RunService")
 local tweenservice = game:GetService("TweenService")
@@ -299,87 +299,22 @@ function library:CreateWindow(name, size, hidebutton)
     end
 
 	-- Sivik's rat
-	window.Skull = Instance.new("ImageLabel", window.Frame)
-    window.Skull.Name = "skull"
-	window.Skull.BackgroundTransparency = 1
-    window.Skull.BorderSizePixel = 0
-    window.Skull.ScaleType = Enum.ScaleType.Fit
-	window.Skull.AnchorPoint = Vector2.new(0.5, 0.5)
-    window.Skull.Position = window.Frame.Position
-    window.Skull.Size = UDim2.new(0, 300, 0, 300)
-    window.Skull.Image = "http://www.roblox.com/asset/?id=1564120517"
-    window.Skull.ImageTransparency = 0.95
-	window.Skull.ImageColor3 = Color3.new(255, 255, 255)
-	window.Skull.ZIndex = 2
+	window.Logo = Instance.new("ImageLabel", window.Frame)
+    window.Logo.Name = "Logo"
+	window.Logo.BackgroundTransparency = 1
+    window.Logo.BorderSizePixel = 0
+    window.Logo.ScaleType = Enum.ScaleType.Fit
+	window.Logo.AnchorPoint = Vector2.new(0.5, 0.5)
+    window.Logo.Position = window.Frame.Position
+    window.Logo.Size = UDim2.new(0, 300, 0, 300)
+    window.Logo.Image = "http://www.roblox.com/asset/?id=1564120517"
+    window.Logo.ImageTransparency = 0.95
+	window.Logo.ImageColor3 = Color3.new(255, 255, 255)
+	window.Logo.ZIndex = 2
 
-	skullSpin = runservice.RenderStepped:Connect(function(dt)
-		window.Skull.Rotation = (window.Skull.Rotation + 50 * dt) % 360
+	library.logoSpin = runservice.RenderStepped:Connect(function(dt)
+		window.Logo.Rotation = (window.Logo.Rotation + 50 * dt) % 360
 	end)
-
-	--window.SkullText = Instance.new("TextLabel", window.Skull)
-    --window.SkullText.Name = "SkullText"
-	--window.SkullText.BackgroundTransparency = 1
-    --window.SkullText.BorderSizePixel = 0
-	--window.SkullText.AnchorPoint = Vector2.new(0.5, 1)
-    --window.SkullText.Position = UDim2.new(0.5, 0, 0, 0)
-    --window.SkullText.Size = UDim2.new(0.5, 0, 0.1, 0)
-	--window.SkullText.Text = "At last, Collin"
-	--window.SkullText.TextColor3 = Color3.fromRGB(255, 255, 255)
-    --window.SkullText.TextTransparency = 0.9
-	--window.SkullText.TextScaled = true
-	--window.SkullText.ZIndex = 2
-
-    --window.SkullText2 = Instance.new("TextLabel", window.Skull)
-    --window.SkullText2.Name = "SkullText"
-	--window.SkullText2.BackgroundTransparency = 1
-    --window.SkullText2.BorderSizePixel = 0
-	--window.SkullText2.AnchorPoint = Vector2.new(0.5, 0)
-    --window.SkullText2.Position = UDim2.new(0.5, 0, 1, 0)
-    --window.SkullText2.Size = UDim2.new(0.5, 0, 0.1, 0)
-	--window.SkullText2.Text = "Type 'Blackbeard' if ye’ve got the courage"
-	--window.SkullText2.TextColor3 = Color3.fromRGB(255, 255, 255)
-    --window.SkullText2.TextTransparency = 0.85
-	--window.SkullText2.TextScaled = true
-	--window.SkullText2.ZIndex = 2
-
-    -- window.SkullSound = Instance.new("Sound", window.Skull)
-    -- window.SkullSound.SoundId = "rbxassetid://130799737544233"
-
-    -- local typedWord = ""
-    -- local targetWord = "blackbeard"
-    -- local maxLength = #targetWord
-
-    -- wordDetect = uis.InputBegan:Connect(function(input, gameProcessedEvent)
-    --     if gameProcessedEvent then return end
-        
-    --     if input.UserInputType == Enum.UserInputType.Keyboard then
-           
-
-    --         local key = input.KeyCode.Name:lower()
-    --         if key:match("^%a$") then
-    --             typedWord = typedWord .. key
-
-    --             if #typedWord > maxLength then
-    --                 typedWord = typedWord:sub(-maxLength)
-    --             end
-
-    --             if typedWord == targetWord then
-    --                 tweenservice:Create(window.Skull, TweenInfo.new(window.SkullSound.TimeLength, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = UDim2.new(0, 1000, 0, 1000), ImageTransparency = 1}):Play()
-    --                 --tweenservice:Create(window.SkullText, TweenInfo.new(window.SkullSound.TimeLength, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {TextTransparency = 1}):Play()
-    --                 --tweenservice:Create(window.SkullText2, TweenInfo.new(window.SkullSound.TimeLength, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {TextTransparency = 1}):Play()
-
-    --                 window.SkullSound:Play()
-    --                 window.SkullSound.Ended:Wait()
-    --                 window.Skull:Destroy()
-    --                 skullSpin:Disconnect()
-    --                 wordDetect:Disconnect()
-
-    --                 typedWord = ""
-    --             end
-    --         end
-    --     end
-    -- end)
-	-- SKULL ^
 
     window.BlackOutline = Instance.new("Frame", window.Frame)
     window.BlackOutline.Name = "outline"
