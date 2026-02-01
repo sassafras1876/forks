@@ -26,6 +26,7 @@ library.theme = {
     tilesize = 90,
     cursor = true,
     --cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
+    logoimg = "rbxassetid://12892641906",
     backgroundcolor = Color3.fromRGB(20, 20, 20),
     tabstextcolor = Color3.fromRGB(240, 240, 240),
     bordercolor = Color3.fromRGB(60, 60, 60),
@@ -307,7 +308,7 @@ function library:CreateWindow(name, size, hidebutton)
 	window.Logo.AnchorPoint = Vector2.new(0.5, 0.5)
     window.Logo.Position = window.Frame.Position
     window.Logo.Size = UDim2.new(0, 300, 0, 300)
-    window.Logo.Image = "http://www.roblox.com/asset/?id=1564120517"
+    window.Logo.Image = window.theme.logoimg
     window.Logo.ImageTransparency = 0.95
 	window.Logo.ImageColor3 = Color3.new(255, 255, 255)
 	window.Logo.ZIndex = 2
