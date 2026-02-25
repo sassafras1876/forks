@@ -26,7 +26,8 @@ library.theme = {
     tilesize = 90,
     cursor = true,
     --cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
-    logoimg = "rbxassetid://7615992569", -- the default is just the skull img
+    logoimg = "rbxassetid://126666248958594", -- the default is just the skull img
+	logotransparency = 0.95,
     backgroundcolor = Color3.fromRGB(20, 20, 20),
     tabstextcolor = Color3.fromRGB(240, 240, 240),
     bordercolor = Color3.fromRGB(60, 60, 60),
@@ -310,7 +311,7 @@ function library:CreateWindow(name, size, hidebutton)
     window.Logo.Position = window.Frame.Position
     window.Logo.Size = UDim2.new(0, 300, 0, 300)
     window.Logo.Image = window.theme.logoimg
-    window.Logo.ImageTransparency = 0.95
+    window.Logo.ImageTransparency = window.theme.logotransparency
 	window.Logo.ImageColor3 = Color3.new(255, 255, 255)
 	window.Logo.ZIndex = 2
 
